@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyisd ki</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex; /* Engedélyezi a Flexbox használatát */
+            justify-content: center; /* Vízszintesen középre igazítja a tartalmat */
+            align-items: center; /* Függőlegesen középre igazítja a tartalmat */
+            height: 100vh; /* Az oldal teljes magassága */
+            margin: 0; /* Eltávolítja a default margókat */
+            background-color: #faa5cb; /* Háttérszín */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        textarea {
+            width: 90%;
+            height: 200px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .page1 {
+            font-size: 30px;
+            font-family: Oswald;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center; 
+        }
+        .page2-p1 {
+            font-size: 50px;
+            font-family: Oswald;
+            font-weight: bold;
+            font-style: italic;
+            text-align: center; 
+        }
+        .gif {
+            width: 600px;
+        }
+        .atveres {
+            font-size: 20px;
+            font-family: Oswald;
+            font-weight: bold;
+            position: absolute;
+            bottom: 50px;
+            right: 10px;
+        }
+        .gombigazitas {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        /* Oldalak tartalmának középre igazítása */
+        #page1, #page2, #page3 {
+            text-align: center; /* A szöveg vízszintes középre igazítása */
+        }
+    </style>
+</head>
+<body class="bgcolor">
+
+<div id="page1">
+    <h1 class="page1">Szia, László Brigitta!</h1>
+    <h1 class="page1">Idén nagyon jó kislány voltál, ezért jutalomban részesülsz.</h1>
+    <button onclick="openInputPage()">Nyisd ki!</button>
+    <p></p>
+    <img src="santa.jpg" alt="Ez egy minta kép" width="500">
+</div>
+
+<div id="page2" style="display: none;">
+    <h1 class="page2-p1">Boldog Mikulást Brigiiiiii!</h1>
+    <h2 class="page2-p1">Sok-sok pusziiiii!</h2>
+    <p></p>
+    <img src="kiss.gif" alt="Példa GIF" class="gif">
+    <p></p>
+    <button onclick="tovabb()">Itt tudsz továbmenni!</button>
+</div>
+
+<div id="page3" style="display: none;">
+    <p class="page2-p1">Még elég kezdetlges a cucc, de remélem így is tetszett egy picit. </p>
+    <p class="page2-p1">Mégegyszer boldog Mikut Brigiii! Szeretlek!</p>
+    <img src="bubukiss.jpg" alt="Ez egy minta kép" width="500">    
+</div>
+
+<script>
+    function openInputPage() {
+        document.getElementById('page1').style.display = 'none';
+        document.getElementById('page2').style.display = 'block';
+    }
+
+    function tovabb() {
+        document.getElementById('page2').style.display = 'none';
+        document.getElementById('page3').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
